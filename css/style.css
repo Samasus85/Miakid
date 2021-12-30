@@ -83,6 +83,7 @@ li {
 }
 .sign {
     padding-right: 20px;
+    width: 100px;
 }
 .show {
     padding-top: 8px;
@@ -122,9 +123,11 @@ li {
     transform: translateY(-100%);
     top: 0;
 }
+
 .header-search {
-    width: 430px;
+    width: 445px;
     display: flex;
+    justify-content: space-between;
 }
 .search {
     position: relative;
@@ -145,7 +148,7 @@ li {
     border: none;
     line-height: 46px;
     width: 300px;
-    /* text-transform: capitalize !important; */
+
     height: 36px;
     outline: 0;
     color: #4c4b6c;
@@ -164,8 +167,8 @@ li {
 .banners {
     padding-left: 30px;
 }
-.banner {
-    padding-top: 20px;
+.banner-bot {
+    padding-top: 18px;
 }
 .sliders {
     margin-top: 90px;
@@ -247,9 +250,6 @@ li {
     transform: rotate(-90deg);
     margin-left: 12px;
 }
-/* .channel-buttons > .icon {
-    fill: #4330b1;
-} */
 
 .bubble-sale {
     background-color: #abcd02;
@@ -274,15 +274,17 @@ li {
     color: rgb(202, 201, 201);
 }
 .swiper-slide {
-    width: 250px;
+    width: 240px;
     height: 370px;
+    padding-left: 20px;
 }
 .swiper-wrapper {
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .shop {
     fill: #4330b1;
-    background-color: #eeeeee;
 }
 .card-heart {
     width: 19px;
@@ -291,10 +293,18 @@ li {
 .over-box {
     display: none;
 }
+.over-circle:hover {
+    background-color: rgb(98, 205, 255);
+}
+.over-circle:hover .shop {
+    fill: #eeeeee;
+}
 .slide-card:hover .over-box {
     transition: 1.5s;
-
     display: flex;
+}
+.over-circle:active .heart {
+    fill: #fd0404;
 }
 .slide-card:hover .stars {
     display: none;
@@ -326,7 +336,7 @@ li {
     justify-content: space-between;
 }
 .footer-logos {
-    width: 400px;
+    width: 380px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -346,35 +356,243 @@ li {
     margin: 0;
     padding-left: 0;
 }
+.info-list {
+    padding-left: 0;
+}
 .info-items {
     padding-top: 15px;
+    padding-left: 0;
 }
 .logos-item {
     text-decoration: none;
     color: #4c4b6c;
     opacity: 0.8;
 }
-.footer-information,
-.footer-service {
-    width: 200px;
+.footer-info-list {
+    width: 400px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
 }
 .footer-insta {
-    width: 400px;
+    width: 380px;
     height: 300px;
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
     flex-direction: column;
-    margin-left: 25px;
+    margin-left: 40px;
     /* text-align: start; */
 }
 .footer-info {
     font-size: 16px;
     font-weight: 900;
     padding-top: 30px;
+    opacity: 0.6;
+}
+.insta-title {
+    padding-left: 10px;
+    margin-top: 33px;
+}
+.header-nav {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopping-bag {
+    width: 220px;
+}
+.shop-text {
+    width: 80px;
+}
+/* ----------------------adaptive------------ */
+
+@media (max-width: 1024px) {
+    .container {
+        width: 1000px;
+        /* margin-left: 20px;
+        margin-right: 20px; */
+        padding-right: 20px;
+    }
+    .sign {
+        width: 120px;
+    }
+    .header {
+        max-width: 100%;
+    }
+    .head-item {
+        width: 100px;
+    }
+    .header-left {
+        width: 300px;
+    }
+    .header-right {
+        justify-content: space-between;
+        /* width: 575px; */
+        padding-right: 10px;
+    }
+    .header-second-list {
+        width: 700px;
+    }
+    .header-nav {
+        width: 950px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-bottom-list {
+        width: 500px;
+    }
+    .header-search {
+        width: 300px;
+    }
+    .search {
+        width: 200px;
+    }
+    .slider img {
+        width: 610px;
+        height: 350px;
+    }
+    .banner {
+        padding-top: 5px;
+    }
+    .banners img {
+        margin-top: 0;
+        width: 320px;
+        height: 175px;
+    }
+    .feat-right {
+        margin-right: 20px;
+    }
+    .bot-banner {
+        display: none;
+    }
+    .footer-logos {
+        max-width: 32%;
+    }
+    .footer-insta {
+        max-width: 420px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    .insta-cards {
+        padding-bottom: 20px;
+    }
+    .insta-cards img {
+        width: 70px;
+        height: 70px;
+    }
+    /* .shopping-bag {
+        margin-left: 20px;
+    } */
+    .cart-text {
+        width: 200px;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+    }
+    /* .footer-information {
+        width: 265px;
+    } */
+}
+@media (max-width: 768px) {
+    .container {
+        width: 760px;
+        padding-left: 10px;
+    }
+    .logo {
+        width: 90px;
+    }
+    .header-second {
+        align-items: center;
+    }
+    .header-second-list {
+        width: 555px;
+    }
+    .header-second-item {
+        width: 190px;
+        padding-left: 5px;
+    }
+    .head-top-text {
+        width: 150px;
+        font-size: 12px;
+    }
+    .border {
+        padding-left: 5px;
+    }
+    .header-nav {
+        width: 750px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-bottom-list {
+        width: 340px;
+    }
+    .header-search {
+        width: 325px;
+    }
+    .shopping-bag {
+        width: 120px;
+    }
+    .shop-text {
+        display: none;
+    }
+    .search {
+        width: 240px;
+    }
+    .sliders {
+        width: 768px;
+        flex-direction: column;
+    }
+    .slider {
+        margin-left: 30px;
+    }
+    .slider img {
+        width: 645px;
+    }
+    .banners {
+        width: 680px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+    .swiper-slide {
+        /* margin-top: 20px; */
+        margin-right: 25px;
+        width: 200px;
+        height: 335px;
+    }
+    .bottom-banner-left {
+        width: 760px;
+        margin-right: 80px;
+    }
+    .bottom-ban {
+        width: 600px;
+        margin-left: 50px;
+    }
+    .bottom-banner-right {
+        display: none;
+    }
+    .footer-menu {
+        width: 760px;
+    }
+    .footer-logos {
+        width: 370px;
+    }
+    .footer-info-list {
+        width: 370px;
+        padding-right: 20px;
+    }
+    .footer-insta {
+        display: none;
+    }
 }

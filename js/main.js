@@ -11,11 +11,10 @@
 //     },
 // });
 
-const mySwiper = new Swiper('swiper', {
+const mySwiper = new Swiper('swiper-slide', {
 
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 40,
+
     breakpoints: {
         // when window width is >= 320px
         320: {
@@ -23,20 +22,23 @@ const mySwiper = new Swiper('swiper', {
             spaceBetween: 20
         },
         // when window width is >= 480px
-        480: {
+        768: {
             slidesPerView: 3,
             spaceBetween: 30
         },
-        // when window width is >= 640px
-        640: {
+
+        960: {
             slidesPerView: 4,
             spaceBetween: 40
         },
-        1000: {
+        1024: {
             slidesPerView: 5,
-            spaceBetween: 40
+            spaceBetween: 50
         }
+
     },
+
+
     // Navigation arrows
     navigation: {
         nextEl: '#feat-next',
