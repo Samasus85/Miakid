@@ -4,6 +4,6 @@ let addTo = () => {
     let price = this.parentNode.parentNode.parentNode.querySelectorAll('.price span')
     let image = this.parentNode.parentNode.parentNode.querySelectorAll('.main-card-img img')
 }
-for (let i = 0; i < addToCard.clientHeight; i++) {
+for (let i = 0; i < addToCard.lenght; i++) {
     addToCard[i].addEventListener('click', addTo, false);
 }
